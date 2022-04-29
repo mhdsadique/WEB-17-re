@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Local storage</title>
+
+    <style>
+  #navbar{
+
+     background-color: rgb(247, 0, 255);
+     
+    text-align: center;
+    margin-bottom: 50px; 
+
+       }
+   
+     
+
+    </style>
+   
+
+</head>
+<body>
+
+  <div id="navbar">
+
+        <div><a href="backent.html">BACKENT</a></div>
+    
+    <div><a href="frontent.html">FRONTENT</a></div>  
+  </div>
+    
+
+    <form id="localstorage">
+
+   <input id="image" type="text" placeholder="Enter Image URL"/>
+   <input id="name" type="text" placeholder="Enter Name"/>
+  <input id="logo" type="text" placeholder="company logo" />
+  <input id="role" type="text" placeholder="Enter role" />
+
+  <input type="submit" />
+    </form>
+  
+
+</body>
+</html>
+
+
+<script>
+   
+   document.querySelector("#localstorage").addEventListener("submit",investerdata)
+  //  .addEventListener("submit" ,investerdata);
+   
+
+     var investeroarr=JSON.parse(localStorage.getItem("investersData")) || []
+   function investerdata(){
+    event.preventDefault();
+     var investersobj={
+       investerImg:localstorage.image.value,
+       investerName:localstorage.name.value,
+       investerLogo:localstorage.logo.value,
+       investerRole:localstorage.role.value,
+     }
+     investeroarr.push(investersobj)
+     console.log( investeroarr);
+     localStorage.setItem("investersData",JSON.stringify(investeroarr))
+   }
+
+
+  
+  
+</script>
