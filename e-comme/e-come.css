@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.home{
+    display: flex;
+    background-color: rgb(144, 144, 172);
+    /* justify-content: space-between; */
+}
+
+.product{
+display: flex;
+
+justify-content: space-between;
+color: rgb(16, 12, 8);
+}
+
+.user{
+
+display: flex;
+justify-content: space-between;
+color: rgb(201, 68, 24);
+}
